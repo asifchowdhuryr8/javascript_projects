@@ -1,0 +1,28 @@
+{
+  "name": "tab-component",
+  "version": "1.0.0",
+  "description": "Building a tab component",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "webpack --config webpack.production.config.js",
+    "dev": "webpack serve --config webpack.dev.config.js --hot"
+  },
+  "author": "ITS MAC",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.4",
+    "node-sass": "^6.0.1",
+    "postcss-loader": "^6.2.0",
+    "sass-loader": "^12.3.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^5.64.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  }
+}

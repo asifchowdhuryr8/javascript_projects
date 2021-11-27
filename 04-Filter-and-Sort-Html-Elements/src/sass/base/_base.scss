@@ -1,0 +1,20 @@
+$grey: #b9b9b9;
+$white: #fff;
+$blue-light: #33bdef;
+$blue-dark: #019ad2;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    min-height: 100%;
+}
