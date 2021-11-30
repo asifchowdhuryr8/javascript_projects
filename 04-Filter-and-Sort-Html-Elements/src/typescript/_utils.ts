@@ -24,3 +24,21 @@ const filterElement4 = new FilterElement(
     "all Js",
     "JS"
 );
+const filterElement5 = new FilterElement(
+    "src/images/desktop/img-2.jpg",
+    "Mountain",
+    "all Html jS",
+    "HTML"
+);
+const filterElement6 = new FilterElement(
+    "src/images/desktop/img-3.jpg",
+    "Mountain",
+    "all html Css",
+    "CSS"
+);
+const filterElement7 = new FilterElement(
+    "src/images/desktop/img-4.jpg",
+    "Mountain",
+    "all css js",
+    "JS"
+);
