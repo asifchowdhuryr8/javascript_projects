@@ -1,0 +1,186 @@
+/*
+Game design inspired from this image:
+https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/846/538/datas/original.png
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
+    --tomato: hsl(0, 81%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsla(0, 0%, 97%, 0.851);
+    --gradient-first-color: hsl(270, 35%, 50%);
+    --gradient-second-color: hsl(229, 80%, 66%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    color: hsl(0, 0%, 20%);
+    background: linear-gradient(
+        315deg,
+        var(--gradient-first-color) 0%,
+        var(--gradient-second-color) 74%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* LAYOUT */
+main {
+    border-radius: 9px;
+    box-shadow: 0 3rem 5rem hsla(0, 0%, 0%, 0.25);
+    display: flex;
+    position: relative;
+    width: 100rem;
+    min-height: 60rem;
+    overflow: hidden;
+}
+
+.player {
+    flex-basis: 50%;
+    padding: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light-grey);
+    position: relative;
+}
+
+.player--active {
+    background-color: var(--white);
+}
+
+.player--active .name,
+.player--active .score {
+    font-weight: 700;
+}
+
+.player--winner {
+    background: linear-gradient(
+        250deg,
+        var(--gradient-first-color) 10%,
+        var(--gradient-second-color) 100%
+    );
+}
+
+.player--winner .name {
+    font-weight: 700;
+    color: var(--tomato);
+}
+
+.name {
+    position: relative;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.score {
+    font-size: 8rem;
+    color: var(--tomato);
+    margin-bottom: auto;
+}
+
+.player__indicator {
+    opacity: 0;
+    position: absolute;
+    top: 17.5%;
+    right: 20%;
+    height: 20px;
+    width: 20px;
+    background: var(--tomato);
+    border-radius: 50%;
+    transition: opacity 500ms ease-in-out;
+}
+
+.player__indicator--active {
+    opacity: 1;
+}
+
+.current {
+    background-color: var(--tomato);
+    opacity: 0.8;
+    border-radius: 9px;
+    width: 60%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.player--active .current {
+    opacity: 1;
+}
+
+.current-label {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    color: var(--light-grey);
+}
+
+.current-score {
+    color: var(--white);
+    font-size: 3rem;
+}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 16.5rem;
+    transform: translateX(-50%);
+    height: 10rem;
+    box-shadow: 0 2rem 5rem hsla(0, 0%, 0%, 0.2);
+}
+
+.btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    font-family: inherit;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--white);
+    background: linear-gradient(
+        315deg,
+        var(--gradient-first-color) 0%,
+        var(--gradient-second-color) 100%
+    );
+    padding: 0.7rem 2.5rem;
+    border-radius: 50rem;
+    box-shadow: 0 1.75rem 3.5rem hsla(0, 0%, 0%, 0.1);
+}
+
+.btn--new-game {
+    top: 7%;
+}
+
+.btn--roll-dice {
+    bottom: 28%;
+}
+
+.btn--hold {
+    bottom: 17%;
+}
+
+.btn:active,
+.btn:focus {
+    transform: translate(-50%, 3px);
+    box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.15);
+}
