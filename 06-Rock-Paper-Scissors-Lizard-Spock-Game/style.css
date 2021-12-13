@@ -1,0 +1,46 @@
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.winner {
+    margin-top: 5em;
+}
+
+#player-choices div {
+    margin-block: 3rem;
+}
+
+@media screen and (min-width: 500px) {
+    .flex {
+        display: flex;
+        justify-content: var(--justify-content, center);
+        align-items: var(--align-items, center);
+        gap: var(--gap, 2rem);
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    #player-choices.flex {
+        --justify-content: space-evenly;
+    }
+
+    #player-choices div {
+        margin-block: 0;
+        flex-basis: 30%;
+    }
+}
